@@ -19,12 +19,25 @@
         <div class="conteiner navi">
             <nav class="header-navi"> 
                 <a class="link header-logo" href="./index.html" lang="en">Web<span>Studio</span></a>
+
                 <ul class="list list-navi">
-                    <li class="header-item "><a class="link header-link active" href="./index.html"> Студия </a></li>
-                    <li class="header-item "><a class="link header-link" href="./portfolio.html"> Портфолио </a></li>
-                    <li class="header-item "><a class="link header-link" href=""> Контакты </a></li>
+
+                    <li class="header-item ">
+                        <a class="link header-link active" href="./index.html"> Студия </a>
+                    </li>
+
+                    <li class="header-item ">
+                        <a class="link header-link" href="./portfolio.html"> Портфолио </a>
+                    </li>
+                    
+                    <li class="header-item ">
+                        <a class="link header-link" href=""> Контакты </a>
+                    </li>
+                    
                 </ul>
             </nav>
+
+
             <ul class="list list-contact">
 
                 <li class="header-cont">
@@ -52,13 +65,22 @@
             <!--                             hero                                     -->
 
     <main>
+                   
+
         <section class="section main-hero">
             <div class="conteiner">
-                    <h1 class="hero-title">эффективные решения <br> для вашего бизнеса</h1>
-                    <button class="hero-btn" type="button">Заказать услугу</button>                
-            </div>
+                <h1 class="hero-title">эффективные решения <br> для вашего бизнеса</h1>
+                <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>                
+
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="close-btn" data-modal-close>
+                            <img src="./images/Vector-close.svg" width="11" height="11" alt="close-img">                            </button>
+                    </div>
+                </div>
+            </div>            
         </section>
-        
+
             <!--                            concept                                    -->
 
             <section class="section section-concept">
@@ -115,9 +137,28 @@
                 <div class="conteiner">
                     <h2 class="we-doing">Чем мы занимаемся</h2>
                     <ul class="list we-doing-list">
-                        <li class="we-doing-img" ><img src="./images/pic1.jpg" alt="Komp and keyboard" width="370" height="294">
-                        <li class="we-doing-img" ><img src="./images/pic2.jpg" alt="komp and telefon" width="370" height="294">
-                        <li class="we-doing-img" ><img src="./images/pic3.jpg" alt="komp and iPad" width="370" height="294">
+
+                        <li class="we-doing-img" >
+                            <img src="./images/pic1.jpg" alt="Komp and keyboard" width="370" height="294">
+                            <div class="wrapp-label" >
+                                <p class="doing-label">Десктопные приложения</p>
+                            </div>
+                        </li>
+
+                        <li class="we-doing-img" >
+                            <img src="./images/pic2.jpg" alt="komp and telefon" width="370" height="294">
+                            <div class="wrapp-label">
+                                <p class="doing-label">Мобильные приложения</p>
+                            </div>
+                        </li>
+
+                        <li class="we-doing-img" >
+                            <img src="./images/pic3.jpg" alt="komp and iPad" width="370" height="294">
+                            <div class="wrapp-label">
+                                 <p class="doing-label">Дизайнерские решения</p>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </section>
@@ -445,5 +486,11 @@
     
         </div>
     </footer>
+
+
+
+
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
