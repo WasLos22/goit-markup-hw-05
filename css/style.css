@@ -198,6 +198,7 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+
 }
 .backdrop {
   position: fixed;
@@ -624,6 +625,9 @@ img {
 .card {
   text-decoration: none;
   display: block;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-sadow;
 }
 .card:hover,
 .card:focus{
