@@ -635,7 +635,9 @@ img {
   position: relative;
   overflow: hidden;
 }
-.box:focus .overlay,
+.card:focus .overlay{
+  transform: translatey(0);
+}
 .box:hover .overlay{
   transform: translatey(0);
 }
