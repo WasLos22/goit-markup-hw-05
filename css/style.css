@@ -207,6 +207,9 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 250ms;
 }
 .modal {
   position: absolute;
@@ -385,6 +388,7 @@ img {
   border-radius: 50%;
   color: var(--color-for-svg);
   transition-duration: 250ms;
+  transition-property: background-color, color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .person-link:focus,
@@ -420,6 +424,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--color-for-svg);
+  transition-property: border, color;
 }
 .custom-link:focus,
 .custom-link:hover {
@@ -475,6 +480,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -551,9 +557,7 @@ img {
   padding: 6px 24px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
-  transition-property: color;
-  transition-property: box-shadow;
+  transition-property: background-color, color, box-sadow;
 }
 .portfolio-btn:focus,
 .portfolio-btn:hover {
@@ -611,10 +615,7 @@ img {
   margin-left: 30px;
   margin-top: 30px;
 }
-.portfolio-list:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+ 
 .card-text {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
@@ -622,17 +623,23 @@ img {
 }
 .card {
   text-decoration: none;
+  display: block;
+}
+.card:hover,
+.card:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-animation {
   position: relative;
   overflow: hidden;
 }
-.box:hover .overlay {
-  transform: translatex(0);
+.box:focus .overlay,
+.box:hover .overlay{
+  transform: translatey(0);
 }
-
-.overlay {
+.overlay {    
   position: absolute;
   top: 0;
   left: 0;
